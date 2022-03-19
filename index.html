@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/index.css">
+    
+<body>
+    
+    <!--the heading of the Quiz-->
+    <div class="body1">
+    <div class="head">
+        <h1>Online Quiz</h1>
+    </div>
+
+    <!--Instructions to the students-->
+
+    <div class="instructions">
+        <ul>
+            <li>Dear Students here you are given 8 questions each question carries 1 mark</li>
+            <li>This is a sample quiz of the questions that are going to appear in the final exam</li>
+        </ul>
+    </div>
+
+    <!--The questions part-->
+    <div class="questions">
+        <h2 id="Name_tag">Name : <input type="text" id="name_id"> <button onclick="setName()" >Submit</button> <p><span id="name_status"></span></p> </h2>
+       
+        
+        <!---->
+        <!-- Question 1-->
+        <div class="card">
+            <div class="q1">
+
+                <h3><span style="font-size: 25px;">1st Question </span> :- <br> Choose the <span style="font-style: italic;">Single</span> correct answer</h3>
+                <hr>
+                <h4>The smallest unit of matter that can exist independently is</h4>
+                <p>(a) <input name="q1" value="atom" type="radio"> atom <span id="q1.s1"></span></p> 
+                <p>(b) <input name="q1" value="molecule" type="radio"> molecule <span id="q1.s2"></span></p> 
+                <p>(c) <input name="q1" value="ion" type="radio"> ion <span id="q1.s3"></span></p> 
+                <p>(d) <input name="q1" value="radical" type="radio"> radical <span id="q1.s4"></span></p> 
+                <span id="q1.status"></span>
+                &ensp;<button onclick="validq1()">Submit</button>
+            </div>
+            <div class="explain">
+                
+                <h3>Explanation <span class="open" id="open1" onclick="open_e('1')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content1" style="display: none;">
+                    <h3>
+                        <span class="close" id="close1" style="display: none;" onclick="close_e('1')">X</span>
+                    </h3>
+                    <h3>
+                        The atom is the smallest particle which is not divisble
+                    </h3>
+
+                    <h3>So the option is  &ensp; <span>-> &ensp; A</span></h3>
+
+                    
+                </div>
+
+            </div>
+        </div>
+        
+        
+        <!--Question 2-->
+        <div class="card">
+            <div class="q2">
+
+                <h3><span style="font-size: 25px;">2nd Question </span> :- <br> Choose the <span style="font-style: italic;">One or more</span> correct answer(s)</h3>
+                <hr>
+                <h4>The smallest unit of matter that can exist independently is</h4>
+
+                <ul>
+                    <li class="q2_li">
+                        <p>(a) <input id="q21.radio" name="q2.1" type="radio"> electrons <span id="q2.s1"></span></p>
+                    </li>
+                    <li class="q2_li">
+                        <p>(b) <input id="q22.radio" name="q2.2" type="radio"> protons <span id="q2.s2"></span></p>
+                    </li class="q2_li">
+                    <li class="q2_li">
+                        <p>(c) <input id="q23.radio" name="q2.3" type="radio"> neutrons <span id="q2.s3"></span></p>
+                    </li>
+                    <li class="q2_li">
+                        <p>(d) <input id="q24.radio" name="q2.4" type="radio"> molecule <span id="q2.s4"></span></p>
+                    </li>
+                </ul>
+
+                <span id="q2.status"></span>
+                &ensp;<button onclick="clear2()">Clear</button>
+                &ensp;<button onclick="validq2()">Submit</button>
+            </div>
+            <div class="explain">
+                <h3>Explanation <span class="open" id="open2" onclick="open_e('2')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content2" style="display: none;">
+                    <h3>
+                        <span class="close" id="close2" style="display: none;" onclick="close_e('2')">X</span>
+                    </h3>
+                    <h3>
+                        Molecule is the combination of two or more, same or different atoms
+                    </h3>
+                    <h3>Where as <span>Electrons Protons Neutrons</span> are charges which exists independently</h3>
+
+                    <h3>So the options &ensp; <span>A, B, C</span> &ensp; are correct</h3>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--Question 3-->
+
+        <div class="card">
+            <div class="q3">
+                <h3><span style="font-size: 25px;">3rd Question </span> :-
+                    <br> Fill in the blanks</h3>
+                <hr>
+                <h4>The charge of electron is 
+                    <select id="select1">
+                        <option value="positive">positive</option>
+                        <option value="negative">negative</option>
+                    </select>  
+                    <span id="q3.s1"></span>
+                    , and the proton is
+                    <select id="select2">
+                        <option value="positive">positive</option>
+                        <option value="negative">negative</option>
+                    </select>  
+                    <span id="q3.s2"></span>
+                </h4>
+
+                <span id="q3.status"></span>
+
+                &ensp;<button onclick="validq3()">Submit</button>
+            </div>
+            <div class="explain">
+                <h3>Explanation <span class="open" id="open3" onclick="open_e('3')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content3" style="display: none;">
+                    <h3>
+                        <span class="close" id="close3" style="display: none;" onclick="close_e('3')">X</span>
+                    </h3>
+                    <h3>Electrons and Protons are charges in an atom</h3>
+                    <h3>They have <span>Negative</span> and <span>Positive</span> charges respectively</h3>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--Question 4-->
+
+        <div class="card">
+            <div class="q4">
+                <h3><span style="font-size: 25px;">4th Question </span> :- <br> Fill in the blanks</h3>
+                <hr>
+                <h4><span style="font-style: oblique;">Note :</span> the answer is case sensitive</h4>
+
+                <h4>
+                    The SI unit of length, metre is denoted by
+                    <input id="q4.t1" type="text"> <span id="q4.s1"></span>
+                    and the SI unit of electric current, ampere is denoted by
+                    <input id="q4.t2" type="text"> <span id="q4.s2"></span>
+                </h4>
+                <span id="q4.status"></span>
+                &ensp;<button onclick="validq4()">Submit</button>
+            </div>
+            <div class="explain">
+                <h3>Explanation <span class="open" id="open4" onclick="open_e('4')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content4" style="display: none;">
+                    <h3>
+                        <span class="close" id="close4" style="display: none;" onclick="close_e('4')">X</span>
+                    </h3>
+                    <h3>Length is measured in <span>Meters</span> <br> and current is Measured in <span>Amperes</span></h3>
+                    <h3>So SI unit of Length : <span>m</span></h3>
+                    <h3>So SI unit of Current : <span>A</span></h3>                    
+                </div>
+            </div>
+        </div>
+
+        <!--Question 5-->
+
+        <div class="card">
+            <div class="q5">
+                <h3><span style="font-size: 25px;">5th Question </span> :- <br> Fill in the blanks</h3>
+                <hr>
+                <h4><span style="font-style: oblique;">Note :</span> the answer is not case sensitive</h4>
+
+                <h4>
+                    A hundredth of a metre is a 
+                    <input type="text" name="" id="q5.t"> <span id="q5.s"></span>
+                </h4>
+
+                <span id="q5.status"></span>
+
+                &ensp;<button onclick="validq5()">Submit</button>
+            </div>
+            <div class="explain">
+                <h3>Explanation <span class="open" id="open5" onclick="open_e('5')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content5" style="display: none;">
+                    <h3>
+                        <span class="close" id="close5" style="display: none;" onclick="close_e('5')">X</span>
+                    </h3>
+                    <h3>1 meter is equal to 100 cm </h3>
+                    <h3>So hundredth of meter = <span>100cm/100</span> </h3>
+                    <h3>So the answer if <span>Centimeter</span></h3>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--Question 6-->
+
+        <div class="card">
+            <div class="q6">
+                <h3><span style="font-size: 25px;">6th Question </span> :- <br> True or false</h3>
+                <hr>
+                <h4>
+                    Mass and Energy are interconvertible
+                </h4>
+                <h4>options :</h4>
+                <p>(a) 
+                    <input type="radio" name="q6.radio" id="q6.true" value="true">
+                    TRUE
+                    <span id="q6.s1"></span>
+                </p>
+                <p>(b) 
+                    <input type="radio" name="q6.radio" id="q6.false" value="false">
+                    FALSE
+                    <span id="q6.s2"></span>
+                </p>
+                <p>(c) 
+                    <input type="radio" name="q6.radio" id="q6.cbd" value="cbd">
+                    CANNOT BE DETERMINED
+                    <span id="q6.s3"></span>
+                </p>
+
+                <span id="q6.status"></span>
+                &ensp;<button onclick="validq6()">Submit</button>
+
+
+            </div>
+            <div class="explain">
+                <h3>Explanation <span class="open" id="open6" onclick="open_e('6')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content6" style="display: none;">
+                    <h3>
+                        <span class="close" id="close6" style="display: none;" onclick="close_e('6')">X</span>
+                    </h3>
+                    <h3><span>YES</span> &ensp; Mass and Energy are interconvertible</h3>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--Question 7-->
+
+        <div class="card">
+            <div class="q7">
+                <h3><span style="font-size: 25px;">7th Question </span>  :- <br> Match the <span>left column (A)</span> with that of <span>Right 
+                    Column ( B )</span> </h3>
+                <hr>
+                <ul id="q7_ul">
+                    <li class="q7_li">
+                        Length
+                        <select name="" id="q7s1">
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                            <option value="c">c</option>
+                            <option value="d">d</option>
+                            <option value="e">e</option>
+                        </select>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        (a) s
+                        <span></span>
+                        <br>
+                    </li>
+                    <li class="q7_li">
+                        Mass
+                        <select name="" id="q7s2">
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                            <option value="c">c</option>
+                            <option value="d">d</option>
+                            <option value="e">e</option>
+                        </select>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+                        (b) K
+                        <span></span>
+                        <br>
+                    </li>
+                    <li class="q7_li">
+                        Time
+                        <select name="" id="q7s3">
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                            <option value="c">c</option>
+                            <option value="d">d</option>
+                            <option value="e">e</option>
+                        </select>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+                        (c) m
+                        <span></span>
+                        <br>
+                    </li>
+                    <li class="q7_li">
+                        Temperature
+                        <select name="" id="q7s4">
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                            <option value="c">c</option>
+                            <option value="d">d</option>
+                            <option value="e">e</option>
+                        </select>
+                        &emsp;&emsp;&emsp;&emsp;
+                        (d) V
+                        <span></span>
+                        <br>
+                    </li>
+                    <li class="q7_li">
+                        Potential Difference
+                        <select name="" id="q7s5">
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                            <option value="c">c</option>
+                            <option value="d">d</option>
+                            <option value="e">e</option>
+                        </select>
+                        &emsp;
+                        (e) g
+                        <span></span>
+                        <br>
+                    </li>
+                </ul>
+                <span id="q7.status"></span>
+                &ensp;<button onclick="validq7()">Submit</button>
+            </div>
+            <div class="explain">
+                <h3>Explanation <span class="open" id="open7" onclick="open_e('7')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content7" style="display: none;">
+                    <h3>
+                        <span class="close" id="close7" style="display: none;" onclick="close_e('7')">X</span>
+                    </h3>
+                    <h3>The unit of <span>Length</span> is <span>m</span></h3>
+                    <h3>The unit of <span>Mass</span> is <span>g</span></h3>
+                    <h3>The unit of <span>Time</span> is <span>s</span></h3>
+                    <h3>The unit of <span>Temperature</span> is <span>K</span></h3>
+                    <h3>The unit of <span>Potential Difference</span> is <span>V</span></h3>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <!--Questuion 8-->
+        <div class="card">
+            <div class="q8">
+                <h3><span style="font-size: 25px;">8th Question </span> :- <br> <span>Drag and drop</span> the answers from the following list</h3>
+                <hr>
+                <h4><span style="font-style: italic;">Note</span> : select from the given box and fill them in the blanks</h4>
+
+                <h4>If the side of square is 5 cm, its area is 
+                    <span class="container1"></span> <span id="q8.s1"></span>, perimeter is  
+                    <span class="container1"></span> <span id="q8.s2"></span> and the length of the diagonal is 
+                    <span class="container1"></span> <span id="q8.s3"></span>  .
+
+                
+                </h4>
+
+                <h3>Drag from this <span>Box\/</span></h3>
+                <div class="container">
+                    <p class="drag" draggable="true">25cm</p>
+                    <p class="drag" draggable="true">25cm <sup>2</sup></p>
+                    <p class="drag" draggable="true">20cm</p>
+                    <p class="drag" draggable="true">20cm <sup>2</sup></p>
+                    <p class="drag" draggable="true">5(2) <sup>1/2</sup>cm</p>
+                    <p class="drag" draggable="true">5(2) <sup>1/2</sup> cm <sup>2</sup></p>
+                </div>
+
+                <span id="q8.status"></span>
+                
+                &ensp;<button onclick="validq8()">Submit</button>
+            </div>
+            <div class="explain">
+                <h3>Explanation <span class="open" id="open8" onclick="open_e('8')">-></span></h3>
+                <br>
+                <hr>
+
+                <div class="content" id="content8" style="display: none;">
+                    <h3>
+                        <span class="close" id="close8" style="display: none;" onclick="close_e('8')">X</span>
+                    </h3>
+                    <h3>Consider the side of square is &ensp; <span>a</span></h3>
+                    <h3>Area of a square is given by &ensp; <span>a<sup>2</sup> </span></h3>
+                    <h3>Perimeter of a square is given by &ensp; <span>4a</span> </h3>
+                    <h3>Length of the diagonal is given by &ensp; <span>a*2 <sup>1/2</sup></span></h3>
+                    <h3>So when <span>a = 5</span> </h3>
+                    <h3>Area = <span>25 cm <sup>2</sup></span> ; Perimeter = <span>20 cm</span> ; Diagonal = <span>5(2) <sup>1/2</sup>cm</span></h3>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        &ensp;<Button onclick="pop_up()"> <h2>Submit Test</h2>  </Button>
+        
+    </div>
+    </div>
+    <div class="pop-up">
+        <span class="close" onclick="close_pop()">x</span>
+        <div class="info">
+            <h3>
+                Your score is..
+            </h3>
+            <span id="score"></span>
+        </div>
+        <div class="emoji">
+            <h2 id="emoji1">😀</h2>
+        </div>
+    </div>
+
+    <div id="alert">
+        
+    </div>
+    
+    
+    
+
+</body>
+<script src="/index.js"></script>
+<script src="/drag-drop.js"></script>
+</head>
+</html>

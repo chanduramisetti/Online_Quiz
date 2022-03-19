@@ -1,0 +1,250 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(0, 0, 0);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.9;
+    color: rgb(255, 255, 255);
+}
+
+.q8 h4{
+    line-height: 1.8;
+}
+h3 span{
+    color: rgb(0, 250, 42);
+}
+.explain .close{
+    float: right;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 0 8px;
+    border-radius: 50%;
+}
+.explain .open{
+    float: right;
+    cursor: pointer;
+    padding: 0 6px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.container
+{
+    /*box-shadow: 1px,1px,1px;*/
+    background-color: gray;
+    width: 300px;
+    height: 100px;
+    border-radius: 5%;
+    padding: 10px;
+    margin: 5px;
+}
+.container1{
+    padding: 10px 30px;
+    border-radius: 5%;
+    background-color: white;
+    box-shadow: 1px 1px 10px  rgba(255,255,255,0.5);
+}
+
+.container{
+    box-shadow: 4px 2px 10px  rgba(255,255,255,0.5);
+}
+
+.drag
+{
+    display: inline-block;
+    padding: 3px;
+     margin: 1px;
+    justify-content: center;
+    border-radius: 10%;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.draggable.dragging{
+    opacity: .5;
+}
+
+hr .h11{
+    width: 50%;
+    background-color: rgb(74, 255, 74);
+}
+
+ .card{
+   
+    display: flex;
+    
+} 
+.explain{
+    
+
+    margin:10px;
+    padding: 10px;
+    flex:1;
+    transition: all .5s;
+}
+.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8{
+    
+    padding: 10px;
+    margin: 10px;
+    flex:1;
+}
+.q2_li{
+    list-style: none;
+}
+.questions{
+    margin: 30px;
+    padding-left:60px;
+
+}
+input:focus{
+    background-color: rgb(0, 253, 0);
+}
+.questions input{
+    cursor: pointer;
+}
+.questions .q4 input{
+    cursor:default;
+}
+.questions button{
+    position: relative;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 7px 14px;
+    color: rgb(0, 255, 0);
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgb(0, 255, 0) ;
+    cursor: pointer;
+    transition: all 1s;
+}
+.questions button:hover{
+    background-color: rgb(0, 255, 0);
+    color: white;
+}
+
+.instructions{
+    font-size: 20px;
+    color: rgb(85, 84, 84);
+}
+
+.head h1{
+    font-size: 40px;
+    justify-content:center;
+    text-align: center;
+    transition: all 1s;
+}
+.head h1:hover{
+    color: rgb(0, 255, 34);
+}
+
+ .pop-up
+{
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(26, 201, 3, 0.7);
+    border-radius: 15%;
+    box-shadow: 5px 5px 10px rgba(0, 255, 34,0.75);
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    width: 450px;
+    height: 450px;
+    transition: none;
+}
+
+#score{
+    font-size: 20px;
+
+}
+.pop-up .close{
+    
+    position: relative;
+    top: 7%;
+    left:85%;
+    padding: 8px 10px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pop-up .info{
+    position: relative;
+    top: 15%;
+    text-align: center;
+}
+
+.pop-up .emoji
+{
+    position: relative;
+    font-size: 70px;
+    left:33%;
+}
+
+.Name_tag{
+    text-align: center;
+    justify-content: center;
+}
+@media screen and (max-width: 900px) {
+    .card {
+      display: block;
+    }
+    body{
+        word-spacing: 3px;
+        line-height: 2;
+    }
+  }
+  #alert{
+      visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgba(37, 0, 0, 0.700);
+    background-color: rgba(11, 97, 0, 0.534);
+    box-shadow: 2px 2px 10px rgba(124, 124, 124, 0.5);
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    font-size: 22px;
+    text-align: center;
+    left: 50%;
+    bottom: 25px;
+  }
+  #alert.show{
+      visibility: visible;
+      animation: fadein 1s;
+  }
+
+  @-webkit-keyframes fadein{
+      from{
+          bottom: 0;
+          opacity: 0;
+      }
+      to{
+          bottom: 25px;
+          opacity: 1;
+      }
+  }
+  @keyframes fadein{
+      from{
+          bottom: 0;
+          opacity: 0;
+      }
+      to{
+          bottom: 25px;
+          opacity: 1;
+      }
+  }
+  @-webkit-keyframes fadeout {
+    from {bottom: 25px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 25px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
